@@ -14,7 +14,7 @@ status-website:
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
   name: ColorMeter
   introTitle: "ColorMeter is powered by Caipu"
-  introMessage: This is a sample status pagea
+  introMessage: This is a status
   navbar:
     - title: Status
       href: /
@@ -23,3 +23,16 @@ status-website:
 
 # Upptime also supports notifications, assigning issues, and more
 # See https://upptime.js.org/docs/configuration
+notifications:
+  - type: webhook
+    url: https://oapi.dingtalk.com/robot/send?access_token=680d2d494808d09facd200c49ee86434676b71cfa8ef0c8e5d438cfc2d4d99e2
+    method: POST
+    headers:
+      Content-Type: application/json
+    body: |
+      {
+        "msgtype": "text",
+        "text": {
+          "content": "📢 [{{ site.name }}] 状态更新: {{ status }} at {{ date }}"
+        }
+      }
