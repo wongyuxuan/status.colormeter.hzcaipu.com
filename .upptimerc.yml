@@ -13,7 +13,7 @@ status-website:
   baseUrl: status.colormeter.hzcaipu.com
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
   name: ColorMeter
-  introTitle: "ColorMeter is power by Caipu"
+  introTitle: "ColorMeter is powered by Caipu"
   introMessage: This is a sample status pagea
   navbar:
     - title: Status
