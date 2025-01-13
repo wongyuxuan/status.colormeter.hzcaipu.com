@@ -25,7 +25,7 @@ status-website:
 # See https://upptime.js.org/docs/configuration
 notifications:
   - type: webhook
-    url: https://oapi.dingtalk.com/robot/send?access_token=680d2d494808d09facd200c49ee86434676b71cfa8ef0c8e5d438cfc2d4d99e2
+    url: ${{ secrets.DINGTALK_WEBHOOK_URL }}
     method: POST
     headers:
       Content-Type: application/json
@@ -33,6 +33,14 @@ notifications:
       {
         "msgtype": "text",
         "text": {
-          "content": "📢 [{{ site.name }}] 状态更新: {{ status }} at {{ date }}"
+          "content": "📢 站点 {{ site.name }} 状态更新为：{{ status }}，响应时间：{{ response_time }}ms，时间：{{ date }}"
         }
       }
+workflowSchedule:
+  graphs: "0 0 * * *"
+  responseTime: "0 23 * * *"
+  staticSite: "0 1 * * *"
+  summary: "0 0 * * *"
+  updateTemplate: "0 0 * * *"
+  updates: "0 3 * * *"
+  uptime: "*/5 * * * *"
