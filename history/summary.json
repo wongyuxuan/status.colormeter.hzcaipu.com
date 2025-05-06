@@ -4,7 +4,7 @@
     "url": "https://colormeter.hzcaipu.com/api/device_type_setting/latest",
     "icon": "https://icons.duckduckgo.com/ip3/colormeter.hzcaipu.com.ico",
     "slug": "color-meter",
-    "status": "up",
+    "status": "down",
     "uptime": "99.97%",
     "uptimeDay": "97.34%",
     "uptimeWeek": "99.52%",
